@@ -9,6 +9,23 @@ use Illuminate\Support\Facades\DB;
 class Product extends Model
 {
     use HasFactory;
+
+    /**
+     * fillable
+     * 
+     * @var array
+     */
+
+     protected $fillable = [
+        'image',
+        'title',
+        'product_category_id',
+        'supplier_id',
+        'description',
+        'price',
+        'stock',
+    ];
+
     public function get_product()
     {
      //get all product
@@ -23,5 +40,5 @@ class Product extends Model
         return $sql;
     }
 
-
 }
+
